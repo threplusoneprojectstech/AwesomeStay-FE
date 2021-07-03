@@ -73,7 +73,7 @@ html, body{
 
 
 .form-group{
-    margin-top: 1.5rem;
+    margin-top: 1rem;
 }
 
 .form-group input{
@@ -82,7 +82,7 @@ html, body{
 
 .form-control {
     border: none;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid gray;
     border-radius: 0;
 }
 
@@ -102,16 +102,44 @@ html, body{
     font-weight: 800;
 }
 
+.invalid-field{
+    color: rgba(255, 248, 248, 0.9);
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+}
+
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:700,600|Rancho:400|Roboto:700,500");
 
-@media (max-width: 1000px) {
+@media (max-width: 1024px) {
     .illustration{
         display: flex;
         justify-content: center;
-    }
 
+    }
+    .illustration img{
+        height: 280px;
+        width: 310px;
+        min-height: 0;
+        min-width: 0;
+    }
+    .login-title{
+        font-size: 2.5rem;
+    }
     .form-register{
         padding-left: 2rem;
         padding-right: 2rem;
+    }
+}
+@media (max-width: 425px) {
+    .leftRow{
+        display: none;
+    }
+    .form-register{
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .login-title{
+        font-size: 2rem;
     }
 }
