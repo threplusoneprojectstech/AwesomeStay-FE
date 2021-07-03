@@ -1,0 +1,31 @@
+body{
+    background-color: #F2F2F2!important;
+}
+
+.navbar{
+    min-height: 75px;
+}
+
+@media (min-width: 700px){
+    .navbar{
+        padding: .5rem 8rem;
+    }
+}
+.navbar-bg{
+    background-color: #215F63!important;
+}
+
+.navbar-brand{
+    display: flex;
+    align-items: center;
+}
+
+.img-logo{
+    max-height: 65px;
+}
+
+.text-logo{
+    font-family: 'Rancho', serif;
+    margin: auto!important;
+    font-size: 2rem;
+}
