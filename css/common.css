@@ -1,13 +1,8 @@
-<<<<<<< Updated upstream
-body{
-    background-color: #F2F2F2!important;
-=======
 body {
     margin: 0;
     padding: 0;
     font-family: Roboto;
     background-color: #f1f1f1;
->>>>>>> Stashed changes
 }
 
 .navbar{
@@ -50,16 +45,6 @@ body {
     font-weight: 700;
 }
 
-<<<<<<< Updated upstream
-.container {
-    width: auto;
-    max-width: 680px;
-    padding: 0 15px;
-  }
-
-footer{
-    bottom: 0;
-=======
 /* Footer */
 footer a {
     color: #F0ECD3;
@@ -104,5 +89,4 @@ footer a:hover {
     .copyright {
         font-size: 7px;
     }
->>>>>>> Stashed changes
 }
