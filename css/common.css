@@ -31,5 +31,23 @@ body{
 }
 
 .btn{
+    box-shadow: 0 1px 3px 0 black;
+}
+
+.btn.btn-secondary{
+    color: black;
     margin: 0 1rem 0 1rem;
+    background-color: #F0ECD3;
+    border: none;
+    font-weight: 700;
+}
+
+.container {
+    width: auto;
+    max-width: 680px;
+    padding: 0 15px;
+  }
+
+footer{
+    bottom: 0;
 }
