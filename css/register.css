@@ -1,0 +1,145 @@
+/* CSS Variable */
+:root {
+    --black-2 : rgba(0, 0, 0, 0.49);
+    --black : rgba(0, 0, 0, 1);
+    --deep-cerulean : rgba(0, 119, 181, 1);
+    --chathams-blue : rgba(40, 82, 122, 1);
+    --fruit-salad : rgba(81, 148, 96, 1);
+    --fern : rgba(104, 188, 123, 1);
+    --half-baked : rgba(138, 196, 208, 1);
+    --star-dust : rgba(160, 160, 160, 1);
+    --shady-lady : rgba(170, 170, 170, 1);
+    --wild-willow : rgba(175, 211, 116, 1);
+    --mist-gray : rgba(196, 196, 196, 1);
+    --cloud : rgba(198, 198, 198, 1);
+    --celeste : rgba(204, 204, 204, 1);
+    --bon-jour : rgba(224, 224, 224, 1);
+    --mercury-2 : rgba(228, 228, 228, 1);
+    --putty : rgba(229, 213, 133, 1);
+    --mercury : rgba(229, 229, 229, 1);
+    --seashell : rgba(241, 241, 241, 1);
+    --jaffa : rgba(242, 133, 71, 1);
+    --sunglow : rgba(242, 204, 71, 1);
+    --cream-can : rgba(244, 209, 96, 1);
+    --cultured-pearl : rgba(245, 245, 245, 1);
+    --desert-storm : rgba(248, 248, 248, 1);
+    --drover : rgba(251, 238, 172, 1);
+    --red : rgba(255, 0, 0, 1);
+    --vista-white : rgba(255, 248, 248, 1);
+    --white : rgba(255, 255, 255, 1);
+  }
+
+html, body{
+    font-family: Open Sans;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-image: url("../assets/images/pages/register/background.png");
+    height: 100%;
+    width: 100%;
+}
+
+.container{
+    background-color: rgba(255, 248, 248, 0.9);
+    border: 5px solid var(--sunglow);
+    border-radius: 32px;
+}
+
+.login-title{
+    color: var(--chathams-blue);
+    font-family: Open Sans;
+    font-size: 3rem;
+    font-weight: 600;
+    letter-spacing: 0;
+    text-align: center;
+}
+
+.illustration{
+    display: flex;
+    justify-content: center;
+}
+
+.illustration img{
+    height: 570px;
+    width: 550px;
+    min-height: 376px;
+    min-width: 308px;
+}
+
+.form-register{
+    padding-right: 4rem;
+}
+
+
+.form-group{
+    margin-top: 1rem;
+}
+
+.form-group input{
+    background-color: rgba(255, 248, 248, 0.9)!important;
+}
+
+.form-control {
+    border: none;
+    border-bottom: 2px solid gray;
+    border-radius: 0;
+}
+
+.btn{
+    background-color: #78A01B;
+    color: white;
+    font-weight: 700;
+}
+
+.login-link{
+    font-style: italic;
+}
+
+.login-link a{
+    color: var(--chathams-blue);
+    text-decoration: none;
+    font-weight: 800;
+}
+
+.invalid-field{
+    color: rgba(255, 248, 248, 0.9);
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:700,600|Rancho:400|Roboto:700,500");
+
+@media (max-width: 1024px) {
+    .illustration{
+        display: flex;
+        justify-content: center;
+
+    }
+    .illustration img{
+        height: 280px;
+        width: 310px;
+        min-height: 0;
+        min-width: 0;
+    }
+    .login-title{
+        font-size: 2.5rem;
+    }
+    .form-register{
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+@media (max-width: 425px) {
+    .leftRow{
+        display: none;
+    }
+    .form-register{
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .login-title{
+        font-size: 2rem;
+    }
+}
