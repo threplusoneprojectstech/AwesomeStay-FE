@@ -37,7 +37,12 @@ html {
   border-radius: 25px;
   opacity: 0.5;
 }
-
+.search-container>form>input:focus{
+  outline: none;
+}
+.search-container>form>input:active{
+  outline: none;
+}
 .search-container button {
   float: right;
   padding: 6px 10px;
