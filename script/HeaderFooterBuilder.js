@@ -1,38 +1,20 @@
-<!doctype html>
-<html lang="en">
-
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Bootstrap CSS -->
-    <link rel="icon" href="../favicon.ico" />
-    <script src="https://kit.fontawesome.com/f12f4c6ebb.js" crossorigin="anonymous"></script>
-
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rancho">
-    <link rel="stylesheet" href="../assets/libraries/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/common.css">
-
-    <title>AwesomeStay</title>
-</head>
-
-<body>
-    <!-- Header -->
+function HeaderBuilderUnauthorized(){
+    let head = `
     <nav class="navbar navbar-expand-lg navbar-dark navbar-bg">
         <div class="container-fluid">
-            <a class="navbar-brand" href="../pages/home.html">
-                <img src="../assets/images/common/logo.png" alt="" class="d-inline-block align-text-top img-logo">
+            <a class="navbar-brand" href="pages/home.html">
+                <img src="assets/images/common/logo.png" alt="" class="d-inline-block align-text-top img-logo">
                 <p class="text-logo">
                     AwesomeStay
                 </p>
             </a>
+
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <!-- Col-auto -->
+
             <div class="col-auto">
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -42,15 +24,11 @@
                 </div>
             </div>
         </div>
-    </nav>
-
-    <!-- Content -->
-    <div class="container">
-        <br><br><br><br><br><br><br><br><br>
-        Content
-        <br><br><br><br><br><br><br><br><br>
-    </div>
-
+    </nav>`
+    return head;
+}
+function FooterBuilder(){
+    let foot = `
     <!-- Footer -->
     <footer class="text-white text-center">
         <div class="sosmed">
@@ -111,24 +89,10 @@
             <!--copyright text-->
             <p class="text-center copyright">Copyright @2021 AwesomeStay. All Rights Reserved </p>
         </div>
-    </footer>
-
-    <!-- Optional JavaScript; choose one of the two! -->
-
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
-
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
-        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
-        crossorigin="anonymous"></script>
-
-</body>
-
-</html>
+    </footer>`
+    return foot;
+}
+// if belum login..
+doc = document.getElementById("content-body-master-body")
+doc.innerHTML = HeaderBuilderUnauthorized() + doc.innerHTML + FooterBuilder();
+// else udah login..

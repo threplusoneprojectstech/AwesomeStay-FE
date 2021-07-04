@@ -35,7 +35,7 @@ html, body{
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    background-image: url("../assets/images/pages/login/background.png");
+    background-image: url("../assets/images/pages/register/background.png");
     height: 100%;
     width: 100%;
 }
@@ -63,17 +63,17 @@ html, body{
 .illustration img{
     height: 570px;
     width: 550px;
-    min-height: 270px;
-    min-width: 250px;
+    min-height: 376px;
+    min-width: 308px;
 }
 
-.form-login{
-    padding-left: 4rem;
+.form-register{
+    padding-right: 4rem;
 }
 
 
 .form-group{
-    margin-top: 1.5rem;
+    margin-top: 1rem;
 }
 
 .form-group input{
@@ -82,7 +82,7 @@ html, body{
 
 .form-control {
     border: none;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid gray;
     border-radius: 0;
 }
 
@@ -92,15 +92,16 @@ html, body{
     font-weight: 700;
 }
 
-.register-link{
+.login-link{
     font-style: italic;
 }
 
-.register-link a{
+.login-link a{
     color: var(--chathams-blue);
     text-decoration: none;
     font-weight: 800;
 }
+
 .invalid-field{
     color: rgba(255, 248, 248, 0.9);
     font-size: 12px;
@@ -110,52 +111,35 @@ html, body{
 
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:700,600|Rancho:400|Roboto:700,500");
 
-@media (max-width:1000px){
-    .row{
-        flex-direction: column-reverse;
-    }
-
-    body{
-        height: 80%;
-        width: 80%;
-    }
-
-    .login-title{
-        font-size: 2rem;
-    }
-
-    .illustration img{
-        height: 170px;
-        width: 150px;
-    } 
-
+@media (max-width: 1024px) {
     .illustration{
         display: flex;
         justify-content: center;
-    }
 
-    .form-login{
-        padding-top: 0rem;
+    }
+    .illustration img{
+        height: 280px;
+        width: 310px;
+        min-height: 0;
+        min-width: 0;
+    }
+    .login-title{
+        font-size: 2.5rem;
+    }
+    .form-register{
         padding-left: 2rem;
         padding-right: 2rem;
     }
 }
-
-
-/* Tablet */
-@media (max-width: 768px) {
-    .register-title{
-        padding-top: 0;
+@media (max-width: 425px) {
+    .leftRow{
+        display: none;
     }
-}
-
-/* Mobile */
-@media (max-width: 480px) {
-    .toc{
-        font-size: small;
+    .form-register{
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
-
-    .register-link{
-        font-size: 0.75rem;
+    .login-title{
+        font-size: 2rem;
     }
 }
