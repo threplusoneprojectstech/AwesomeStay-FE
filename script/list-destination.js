@@ -147,7 +147,8 @@ function InsertTrans(){
     $.ajax(maketransset).done(function (response) {
         if(response.status == 1){
             let _txid = response.result._id;
-            let url = "http://127.0.0.1:5500/pages/checkout.html?trx="+_txid;
+            // let url = "http://127.0.0.1:5500/pages/checkout.html?trx="+_txid;
+            let url = "https://awesome-stay.netlify.app/pages/checkout.html?trx="+_txid;
             document.getElementById("finalize-section").innerHTML += ("<br><br><br><br><h3>" +url+ "</h3>");
             let d = document.getElementsByClassName("btn")
             for(let i=0; i<d.length; i++) d[i].disabled=true;
