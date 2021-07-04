@@ -87,11 +87,15 @@ function SendchatCallback(e){
             "isUser":1
         }),
     };
-    // console.log(settings);
+    console.log(settings);
     $.ajax(settings).done(function (response) {
+        document.getElementById("chat-input-box").value = ""
+
         if(response.status == 1){
-            // let res = response;
-            rebuilChat();
+            let res = response;
+            // rebuilChat();
+            document.getElementById("chatbox-container-master").innerHTML=""
+            BuildChatHistory();
             return;
         }
         else{
