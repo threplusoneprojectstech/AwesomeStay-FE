@@ -1,0 +1,127 @@
+/* CSS Variable */
+:root {
+    --black-2 : rgba(0, 0, 0, 0.49);
+    --black : rgba(0, 0, 0, 1);
+    --deep-cerulean : rgba(0, 119, 181, 1);
+    --chathams-blue : rgba(40, 82, 122, 1);
+    --fruit-salad : rgba(81, 148, 96, 1);
+    --fern : rgba(104, 188, 123, 1);
+    --half-baked : rgba(138, 196, 208, 1);
+    --star-dust : rgba(160, 160, 160, 1);
+    --shady-lady : rgba(170, 170, 170, 1);
+    --wild-willow : rgba(175, 211, 116, 1);
+    --mist-gray : rgba(196, 196, 196, 1);
+    --cloud : rgba(198, 198, 198, 1);
+    --celeste : rgba(204, 204, 204, 1);
+    --bon-jour : rgba(224, 224, 224, 1);
+    --mercury-2 : rgba(228, 228, 228, 1);
+    --putty : rgba(229, 213, 133, 1);
+    --mercury : rgba(229, 229, 229, 1);
+    --seashell : rgba(241, 241, 241, 1);
+    --jaffa : rgba(242, 133, 71, 1);
+    --sunglow : rgba(242, 204, 71, 1);
+    --cream-can : rgba(244, 209, 96, 1);
+    --cultured-pearl : rgba(245, 245, 245, 1);
+    --desert-storm : rgba(248, 248, 248, 1);
+    --drover : rgba(251, 238, 172, 1);
+    --red : rgba(255, 0, 0, 1);
+    --vista-white : rgba(255, 248, 248, 1);
+    --white : rgba(255, 255, 255, 1);
+  }
+
+html, body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #F2F2F2;
+}
+
+.title{
+    color : var(--black);
+    font-family: Roboto;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.rating{
+    color : var(--fruit-salad);
+    font-family: Roboto;
+    font-size: 1.9rem;
+    font-weight: 500;
+}
+
+.rating img{
+    height: 100%;
+    width: 100px;
+}
+
+.location{
+    color : var(--black);
+    font-family: Roboto;
+    font-size: 1rem;
+}
+
+.location i{
+    margin-right: 10px;
+}
+
+.thumbnail{
+    height: fit-content;
+    display: flex;
+    justify-content: space-around;
+}
+
+.thumbnail img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.morepicture img{
+    width: 100%;
+    height: 150px;
+    border-radius: 5px;
+}
+
+.about-title, .facility-title, .review-title{
+    color : var(--black);
+    font-family: Roboto;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.bg-card {
+    background-color: var(--white) ! important;
+    border-radius: 10px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-left: solid 1px var(--cloud);
+    border-top: solid 1px var(--cloud);
+    box-shadow: 5px 5px var(--cloud);
+}
+
+.user-review{
+    margin-bottom: 1rem;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .morepicture img{
+        width: 100%;
+        height: 100px;
+    }
+
+    .facility-col{
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .morepicture img{
+        width: 30%;
+        height: 50px;
+    }
+}
