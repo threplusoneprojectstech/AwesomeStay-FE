@@ -24,7 +24,7 @@
             <h1 class="head-title">#1 Glamping Advisor <br> in Indonesia</h1>
             <p class="head-subtitle">1000+ Unique Outdoor Destinations Ready to Book</p>
             <div class="search-container">
-                <form action="#">
+                <form action="" id="search-form">
                     <input type="text" placeholder=" Where to? Consult with us now!" name="search" autocomplete="off">
                 </form>
             </div>
@@ -130,7 +130,7 @@
                 lacus accumsan et viverra justo commodo.
             </p>
             <br><br><br>
-            <button type="button" class="btn btn-z" id="btn-register"> Consult Us </button>
+            <button type="button" class="btn btn-z" id="btn-consult-start"> Consult With Us </button>
         </div>
     </div>
 
@@ -172,4 +172,18 @@
 </body>
 <script src="assets/libraries/bootstrap/bootstrap.min.js"></script>
 <script src="./script/HeaderFooterBuilder.js"></script>
+<script>
+    function SearchCallback(e){
+        e.preventDefault();
+        if(window.localStorage.getItem("isAuthorized") == 0){
+            window.location.href = "./pages/login.html";
+            return;
+        }
+        else{
+            window.location.href = "./pages/user-chat.html";
+        }
+    }
+    document.getElementById("search-form").addEventListener("submit", SearchCallback);
+    document.getElementById("btn-consult-start").addEventListener("click", SearchCallback);
+</script>
 </html>

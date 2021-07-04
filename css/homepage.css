@@ -37,13 +37,14 @@ html, body {
 }
 
 .search-container input[type=text] {
-  padding: 6px;
+  padding: 6px 6px 6px 1.5rem;
   margin-top: 8px;
   font-size: 17px;
   width: 65%;
   border: none;
   border-radius: 25px;
   opacity: 0.5;
+  outline: none;
 }
 
 .search-container button {

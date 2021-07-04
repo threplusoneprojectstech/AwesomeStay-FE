@@ -1,8 +1,12 @@
+function logout(){
+    localStorage.clear();
+    localStorage.setItem("isAuthorized", 0)
+}
 function HeaderBuilderUnauthorized(){
     let head = `
     <nav class="navbar navbar-expand-lg navbar-dark navbar-bg">
         <div class="container-fluid">
-            <a class="navbar-brand" href="pages/home.html">
+            <a class="navbar-brand" href="index.html">
                 <img src="assets/images/common/logo.png" alt="" class="d-inline-block align-text-top img-logo">
                 <p class="text-logo">
                     AwesomeStay
@@ -18,8 +22,9 @@ function HeaderBuilderUnauthorized(){
             <div class="col-auto">
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <button type="button" class="btn btn-secondary" id="btn-login"> Login </button>
-                        <button type="button" class="btn btn-secondary" id="btn-register"> Register </button>
+                        <a type="button" class="btn btn-secondary" id="btn-login" href="./pages/login.html"> Login </a>
+                        <a type="button" class="btn btn-secondary" id="btn-register" href="./pages/register.html"> Register </a>
+                        <a type="button" class="btn btn-secondary" id="btn-register" href="./pages/admin-home.html"> Admin </a>
                     </ul>
                 </div>
             </div>
@@ -27,7 +32,36 @@ function HeaderBuilderUnauthorized(){
     </nav>`
     return head;
 }
+function HeaderBuilderAuthorized(){
+    let head = `
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-bg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/images/common/logo.png" alt="" class="d-inline-block align-text-top img-logo">
+                <p class="text-logo">
+                    AwesomeStay
+                </p>
+            </a>
 
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="col-auto">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <h6 style="color:white; margin-top:.6rem;"> Welcome, <b><i>${window.localStorage.getItem("fullName")}</i></b> </h6>
+                        <a type="button" class="btn btn-secondary" id="btn-register" onclick="logout()" href="index.html"> Logout </a>
+                        <a type="button" class="btn btn-secondary" id="btn-register" href="./pages/admin-home.html"> Admin </a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>`
+    return head;
+}
 function HeaderBuilderForPages(){
     let head = `
     <nav class="navbar navbar-expand-lg navbar-dark navbar-bg">
@@ -48,8 +82,8 @@ function HeaderBuilderForPages(){
             <div class="col-auto">
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <button type="button" class="btn btn-secondary" id="btn-login"> Login </button>
-                        <button type="button" class="btn btn-secondary" id="btn-register"> Register </button>
+                    <a type="button" class="btn btn-secondary" id="btn-login" href="./login.html"> Login </a>
+                    <a type="button" class="btn btn-secondary" id="btn-register" href="./register.html"> Register </a>
                     </ul>
                 </div>
             </div>
@@ -57,7 +91,35 @@ function HeaderBuilderForPages(){
     </nav>`
     return head;
 }
+function HeaderBuilderAuthorizedPaged(){
+    let head = `
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-bg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../assets/images/common/logo.png" alt="" class="d-inline-block align-text-top img-logo">
+                <p class="text-logo">
+                    AwesomeStay
+                </p>
+            </a>
 
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="col-auto">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <h6 style="color:white; margin-top:.6rem;"> Welcome, <b><i>${window.localStorage.getItem("fullName")}</i></b> </h6>
+                        <a type="button" class="btn btn-secondary" id="btn-register" onclick="logout()" href="../index.html"> Logout </a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>`
+    return head;
+}
 function FooterBuilder(){
     let foot = `
     <!-- Footer -->
@@ -124,6 +186,7 @@ function FooterBuilder(){
     return foot;
 }
 
+
 // Check pathname
 function pathname(){
     return window.location.pathname
@@ -132,15 +195,25 @@ var pathname = pathname()
 
 // If di dalam pages
 if(pathname.includes("pages")){
-    doc = doc = document.getElementById("content-body-master-body")
-    doc.innerHTML = HeaderBuilderForPages() + doc.innerHTML + FooterBuilder();
+    if(window.localStorage.getItem("isAuthorized") == 0){
+        doc = document.getElementById("content-body-master-body")
+        doc.innerHTML = HeaderBuilderForPages() + doc.innerHTML + FooterBuilder();
+    }
+    else{
+        doc = document.getElementById("content-body-master-body")
+        doc.innerHTML = HeaderBuilderAuthorizedPaged() + doc.innerHTML + FooterBuilder();
+    }
 }
 // If di index
 else{
-    // if belum login..
-    doc = document.getElementById("content-body-master-body")
-    doc.innerHTML = HeaderBuilderUnauthorized() + doc.innerHTML + FooterBuilder();
-    // else udah login..
+    if(window.localStorage.getItem("isAuthorized") == 0){
+        doc = document.getElementById("content-body-master-body")
+        doc.innerHTML = HeaderBuilderUnauthorized() + doc.innerHTML + FooterBuilder();
+    }
+    else{
+        doc = document.getElementById("content-body-master-body")
+        doc.innerHTML = HeaderBuilderAuthorized() + doc.innerHTML + FooterBuilder();
+    }
 }
 
 
