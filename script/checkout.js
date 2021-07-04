@@ -24,7 +24,7 @@ function ItemBuilder(itemName, price, itemId){
     <li class="list-group-item d-flex justify-content-between lh-sm">
         <div>
             <h6 class="my-0">${itemName}</h6>
-            <small class="text-muted">${price}</small>
+            <small class="text-muted">Rp. ${price}</small>
         </div>
         <span class="text-muted"><a href="./details.html?iid=${itemId}">Details</a></span>
     </li>
@@ -47,7 +47,6 @@ var settings = {
 };
 $.ajax(settings).done(function (response) {
   if(response.status == 1){
-      window.localStorage.clear();
       res = response["result"];
       document.getElementById("itcountspan-blue").innerHTML = res.orders.length;
       res.orders.forEach(element => {
