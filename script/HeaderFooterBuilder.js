@@ -206,7 +206,7 @@ if(pathname.includes("pages")){
 }
 // If di index
 else{
-    if(window.localStorage.getItem("isAuthorized") == 0){
+    if(window.localStorage.getItem("isAuthorized") == 0 || localStorage.getItem("isAuthorized")==null || localStorage.getItem("isAuthorized")==""){
         doc = document.getElementById("content-body-master-body")
         doc.innerHTML = HeaderBuilderUnauthorized() + doc.innerHTML + FooterBuilder();
     }
