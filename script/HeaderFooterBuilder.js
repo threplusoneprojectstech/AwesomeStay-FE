@@ -133,7 +133,7 @@ function FooterBuilder(){
                             <a href="https://www.twitter.com">
                                 <i class="fab fa-twitter fa-2x">
                                     <div class="fa-text">
-                                        Instagram
+                                        Twitter
                                     </div>
                                 </i>
                             </a>
