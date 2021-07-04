@@ -1,8 +1,6 @@
-html {
+html, body {
   scroll-behavior: smooth;
-}
-*{
-  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  font-family: 'Open Sans',-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,  'Helvetica Neue', sans-serif;
 }
 
 .parallax1 {
@@ -15,12 +13,22 @@ html {
   color: white;
 }
 
+.parallax1 a {
+  color: white;
+  text-decoration: none;
+}
+
+.parallax1 a:hover {
+  color: #78A01B;
+}
+
 .head-title {
   font-size: 80px;
 }
 
 .head-subtitle {
   font-size: 30px;
+  color: #78A01B;
 }
 
 .search-container {
@@ -29,7 +37,7 @@ html {
 }
 
 .search-container input[type=text] {
-  padding: 6px 6px 6px 18px;
+  padding: 6px;
   margin-top: 8px;
   font-size: 17px;
   width: 65%;
@@ -37,12 +45,7 @@ html {
   border-radius: 25px;
   opacity: 0.5;
 }
-.search-container>form>input:focus{
-  outline: none;
-}
-.search-container>form>input:active{
-  outline: none;
-}
+
 .search-container button {
   float: right;
   padding: 6px 10px;
@@ -60,16 +63,7 @@ html {
 
 .btn.btn-x{
   color: black;
-  margin: 0 1rem 0 1rem;
   background-color: #78A01B;
-  border: none;
-  font-weight: 700;
-}
-
-.btn.btn-y{
-  color: black;
-  margin: 0 1rem 0 1rem;
-  background-color: #95714B;
   border: none;
   font-weight: 700;
 }
@@ -135,11 +129,12 @@ html {
 }
 
 .section2 {
-  background-image: url("../assets/images/pages/homepage/C.png");
+  background-image: url("../assets/images/pages/homepage/B.png");
   min-height: 650px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  color: white;
 }
 
 .testimoni {
@@ -165,4 +160,3 @@ html {
   border-radius: 2rem;
   padding: 2rem 1rem;
 }
-
