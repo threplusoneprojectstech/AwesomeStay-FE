@@ -1,5 +1,6 @@
 html, body{
     height: 100%;
+    font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
 }
 
 .text-welcome{
@@ -149,4 +150,8 @@ input:focus{
     overflow: scroll;
     display: flex;
     flex-direction: column-reverse;
+}
+
+.text-back{
+    margin-left: 1.5rem;
 }

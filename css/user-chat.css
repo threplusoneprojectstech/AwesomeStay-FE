@@ -152,3 +152,7 @@ input:focus{
     display: flex;
     flex-direction: column-reverse;
 }
+
+.text-back{
+    margin-left: 1.5rem;
+}
