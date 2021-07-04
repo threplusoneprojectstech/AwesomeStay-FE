@@ -19,7 +19,7 @@ $.ajax(settings).done(function (response) {
         document.getElementById("productName").innerHTML = res["productName"]
         document.getElementById("rating").innerHTML = res["rating"]+`<img src="../assets/images/common/rating/5.png" alt="" srcset="">`
         document.getElementById("location").innerHTML = res["location"]
-        document.getElementById("thumbnail").innerHTML = res["thumbnailUrl"]
+        document.getElementById("thumbnail").src = res["thumbnailUrl"]
         let doc = document.getElementById("more-pict")
         for(let i=0; i<res.morePictureUrl.length; i++){
             if(i==3) break;

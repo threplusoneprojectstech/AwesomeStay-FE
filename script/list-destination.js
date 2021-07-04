@@ -2,16 +2,25 @@ var CartItems = []
 var OrderList = []
 var DestItems = []
 var AddOnItems = []
+function disabledest(){
+    var d = document.getElementsByClassName("btn-dest-add")
+    console.log(d)
+    for(var i=0; i<d.length; i++){
+        console.log(i)
+        d[i].disabled = true;
+    }
+}
 function AddDestinationCallback(id_val){
     let doc = document.getElementById("stuffs-list");
     DestItems.forEach(element=>{
         if(element.key == id_val){
             doc.innerHTML += `<p>> [Destination] ${element.name}</p>`
+            disabledest();
             OrderList.push(element.key)
             return;
         }
     });
-    document.getElementById("btn-dest-add").disabled = true;
+    
 }
 function AddAdonCallback(id_val){
     let doc = document.getElementById("stuffs-list");
@@ -42,7 +51,7 @@ function DestinationBuilder(thumbnailUrl, title, price, location, id){
                     ${location}
                 </div></b>
                 <br>
-                <button type="button" class="btn btn-x" value="${id}" onclick="AddDestinationCallback(this.value)" id="btn-dest-add"> Add </button>
+                <button type="button" id="btn-dest-add" class="btn btn-x btn-dest-add" value="${id}" onclick="AddDestinationCallback(this.value)" > Add </button>
             </div>
         </div>
     </div>
@@ -137,14 +146,11 @@ function InsertTrans(){
     };
     $.ajax(maketransset).done(function (response) {
         if(response.status == 1){
-            console.log(response)
             let _txid = response.result._id;
-            console.log(_txid);
             let url = "http://127.0.0.1:5500/pages/checkout.html?trx="+_txid;
             document.getElementById("finalize-section").innerHTML += ("<br><br><br><br><h3>" +url+ "</h3>");
-            document.getElementById("btn-dest-add").disabled = true;
-            document.getElementById("btn-maj").disabled = true;
-            document.getElementById("btn-maj-ckt").disabled = true;
+            let d = document.getElementsByClassName("btn")
+            for(let i=0; i<d.length; i++) d[i].disabled=true;
         }
         else{
             alert(response.message);
