@@ -51,6 +51,11 @@ function DestinationBuilder(thumbnailUrl, title, price, location, id){
                     ${location}
                 </div></b>
                 <br>
+                <div class="btn-detail-div">
+                    <a href="detail-destination.html?iid=${id}">
+                    <button type="button" id="btn-dest-detail" class="btn btn-detail btn-dest-detail" value="${id}" > Detail </button>
+                    </a>
+                </div>
                 <button type="button" id="btn-dest-add" class="btn btn-x btn-dest-add" value="${id}" onclick="AddDestinationCallback(this.value)" > Add </button>
             </div>
         </div>
@@ -69,6 +74,11 @@ function AddOnBuilder(thumbnailUrl, title, price, id){
                     Rp. ${price}/pax
                 </div>
                 <br>
+                <div class="btn-detail-div">
+                    <a href="detail-destination.html?iid=${id}">
+                    <button type="button" id="btn-dest-detail" class="btn btn-detail btn-dest-detail" value="${id}" > Detail </button>
+                    </a>
+                </div>
                 <button type="button" class="btn btn-x" value="${id}" onclick="AddAdonCallback(this.value)" id="btn-maj"> Add </button>
             </div>
         </div>
