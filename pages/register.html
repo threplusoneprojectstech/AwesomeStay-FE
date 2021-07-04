@@ -55,8 +55,10 @@
                         <span class="invalid-field" id="invalid-password2">_</span>
                     </div>
                     <div class="text-center mt-3">
-                        <input type="checkbox" name="" id="agree" />
-                        <label for="agree">I agree to the terms and condition</label>
+                        <input type="checkbox" name="" id="toc-input" value="agree"
+                        onchange="ValidateToc()" onkeyup="ValidateToc()" />
+                        <label for="agree">I agree to the terms and condition</label> <br>
+                        <span class="invalid-field" id="invalid-toc">_</span>
                     </div>
                     <div class="text-center mt-3">
                         <button class="btn mb-2" type="submit" id="submit-btn">Register</button>

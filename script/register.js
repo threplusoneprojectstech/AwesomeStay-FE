@@ -79,13 +79,30 @@ function ValidatePassword2(){
     }
 }
 
+function ValidateToc(){
+    let toc = document.getElementById("toc-input").checked;
+    console.log(toc)
+    if(!toc){
+        document.getElementById("invalid-toc").innerHTML = "Terms and Condition must be agreed";
+        document.getElementById("invalid-toc").style.color = "red";
+        DisableBtn();
+        return false;
+    }
+    else{
+        document.getElementById("invalid-toc").innerHTML = "_";
+        document.getElementById("invalid-toc").style.color = "rgba(255, 248, 248, 0.9)";
+        EnableBtn();
+        return true;
+    }
+}
+
 function RegisterCallback(e){
     e.preventDefault();
     ValidateName();ValidateEmail();ValidatePhone();
-    ValidatePassword(); ValidatePassword2();
+    ValidatePassword(); ValidatePassword2(); ValidateToc();
     DisableBtn();
     if(ValidateName() && ValidateEmail() && ValidatePhone() &&
-        ValidatePassword() && ValidatePassword2() ) EnableBtn();
+        ValidatePassword() && ValidatePassword2() && ValidateToc() ) EnableBtn();
     else return;
     
     let fullName = document.getElementById("name-input").value;
@@ -113,7 +130,7 @@ function RegisterCallback(e){
             window.localStorage.clear();
             // console.length(response);
             alert(response.message);
-            window.location.href = "../index.html";
+            window.location.href = "login.html";
         }
         else{
             alert(response.message);
