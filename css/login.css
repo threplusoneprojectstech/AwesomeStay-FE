@@ -90,9 +90,13 @@ html, body{
     background-color: #78A01B;
     color: white;
     font-weight: 700;
+    width: 11rem;
+    border-radius: 50px;
 }
 
 .register-link{
+    margin-top: .5rem;
+    color: #A1A1A1;
     font-style: italic;
 }
 
@@ -101,6 +105,11 @@ html, body{
     text-decoration: none;
     font-weight: 800;
 }
+
+.register-link a.forgot-pass{
+    color: #A1A1A1;
+}
+
 .invalid-field{
     color: rgba(255, 248, 248, 0.9);
     font-size: 12px;
