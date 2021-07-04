@@ -45,7 +45,7 @@
                 </div>
                 <div class="col-md-7 col-lg-8">
                     <h4 class="mb-3">Billing address</h4>
-                    <form class="needs-validation" novalidate>
+                    <form class="needs-validation" id="form-checkout" novalidate >
                         <div class="row g-3">
                             <div class="col-sm-6">
                                 <label for="firstName" class="form-label">First name</label>
@@ -75,46 +75,10 @@
                             </div>
 
                             <div class="col-12">
-                                <label for="email" class="form-label">Email <span
-                                        class="text-muted">(Optional)</span></label>
+                                <label for="email" class="form-label">Email</label>
                                 <input type="email" class="form-control email" id="email" placeholder="you@example.com">
                                 <div class="invalid-feedback">
-                                    Please enter a valid email address for shipping updates.
-                                </div>
-                            </div>
-
-                            <div class="col-12">
-                                <label for="address" class="form-label">Address</label>
-                                <input type="text" class="form-control address" id="address" placeholder="Jl.Kemanggisan"
-                                    required>
-                                <div class="invalid-feedback">
-                                    Please enter your shipping address.
-                                </div>
-                            </div>
-
-                            <div class="col-md-5">
-                                <label for="country" class="form-label">Country</label>
-                                <input type="text" class="form-control country" id="county" placeholder="Indonesia"
-                                    required>
-                                <div class="invalid-feedback">
-                                    Please enter your county.
-                                </div>
-                            </div>
-
-                            <div class="col-md-4">
-                                <label for="state" class="form-label">City</label>
-                                <input type="text" class="form-control City" id="City" placeholder="Jakarta"
-                                    required>
-                                <div class="invalid-feedback">
-                                    Please enter your city.
-                                </div>
-                            </div>
-
-                            <div class="col-md-3">
-                                <label for="zip" class="form-label">Zip</label>
-                                <input type="text" class="form-control" id="zip" placeholder="" required>
-                                <div class="invalid-feedback">
-                                    Zip code required.
+                                    Please enter a valid email.
                                 </div>
                             </div>
                         </div>
@@ -188,7 +152,7 @@
 
                         <hr class="my-4">
 
-                        <button class="w-100 btn btn-primary btn-lg" type="submit">Continue to checkout</button>
+                        <button class="w-100 btn btn-primary btn-lg" type="submit" value="Submit by Id" onclick="submit_by_id()">Continue to checkout</button>
                     </form>
                 </div>
             </div>
