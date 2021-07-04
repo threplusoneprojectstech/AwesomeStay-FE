@@ -1,5 +1,8 @@
-body{
-    background-color: #F2F2F2!important;
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto;
+    background-color: #f1f1f1;
 }
 
 .navbar{
@@ -42,12 +45,48 @@ body{
     font-weight: 700;
 }
 
-.container {
-    width: auto;
-    max-width: 680px;
-    padding: 0 15px;
-  }
+/* Footer */
+footer a {
+    color: #F0ECD3;
+}
 
-footer{
-    bottom: 0;
+footer a:hover {
+    color: #78a01b;
+}
+
+.sosmed {
+    padding-top: 3rem;
+    padding-bottom: 0.1rem;
+    background-color: #215F63!important;
+}
+  
+.sosmed-text {
+    font-weight: bolder;
+    font-size: 40px;
+}
+    
+.fa-text {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: white;
+    padding: 0.5rem 2.5rem;
+}
+  
+.copyright {
+    font-size: small;
+}
+  
+@media all and (max-width: 575.98px) {
+    .fa img {
+        width: 30px;
+    }
+
+    .fa-text {
+        padding: 0.5rem 0.1rem;
+        font-size: 10px;
+    }
+
+    .copyright {
+        font-size: 7px;
+    }
 }

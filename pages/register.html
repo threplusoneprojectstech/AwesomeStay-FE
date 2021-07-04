@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="icon" href="../favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../assets/libraries/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/register.css">
+</head>
+
+<body>
+    <!-- Header Here -->
+    <div class="container pb-5">
+        <div class="row align-items-center">
+            <div class="col align-self-center leftRow">
+                <div class="illustration">
+                    <img src="../assets/images/pages/register/illustration.png" />
+                </div>
+            </div>
+
+            <div class="col form-register">
+                <div class="text-center mt-5 login-title">REGISTER</div>
+                <form action="" class="d-flex flex-column" id="regist-form" onsubmit="">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Full Name" 
+                            id="name-input" onchange="ValidateName()" onkeyup="ValidateName()"
+                            autocomplete="off">
+                        <span class="invalid-field" id="invalid-name">_</span>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" placeholder="Email" 
+                            id="email-input" onchange="ValidateEmail()" onkeyup="ValidateEmail()" 
+                            autocomplete="off">
+                        <span class="invalid-field" id="invalid-email">_</span>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" class="form-control" placeholder="Phone" 
+                            id="phone-input" onchange="ValidatePhone()" onkeyup="ValidatePhone()"
+                            autocomplete="off">
+                        <span class="invalid-field" id="invalid-phone">_</span>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" placeholder="Password" 
+                            id="password-input" onchange="ValidatePassword()" onkeyup="ValidatePassword()" 
+                            autocomplete="off">
+                        <span class="invalid-field" id="invalid-password">_</span>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" placeholder="Confirm Password" 
+                            id="password2-input" onchange="ValidatePassword2()" onkeyup="ValidatePassword2()"
+                            autocomplete="off">
+                        <span class="invalid-field" id="invalid-password2">_</span>
+                    </div>
+                    <div class="text-center mt-3">
+                        <input type="checkbox" name="" id="agree" />
+                        <label for="agree">I agree to the terms and condition</label>
+                    </div>
+                    <div class="text-center mt-3">
+                        <button class="btn mb-2" type="submit" id="submit-btn">Register</button>
+                    </div>
+                    <div class="login-link text-center">
+                        Already have an account? <a href="login.html"> Log in here </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Here-->
+</body>
+<script src="../assets/libraries/bootstrap/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="../script/register.js"></script>
+</html>

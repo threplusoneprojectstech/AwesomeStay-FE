@@ -1,0 +1,163 @@
+html {
+  scroll-behavior: smooth;
+}
+*{
+  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+}
+
+.parallax1 {
+  background-image: url("../assets/images/pages/homepage/Banner.jpg");
+  min-height: 650px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+
+.head-title {
+  font-size: 80px;
+}
+
+.head-subtitle {
+  font-size: 30px;
+}
+
+.search-container {
+  float: left;
+  width: 100%;
+}
+
+.search-container input[type=text] {
+  padding: 6px 6px 6px 18px;
+  margin-top: 8px;
+  font-size: 17px;
+  width: 65%;
+  border: none;
+  border-radius: 25px;
+  opacity: 0.5;
+}
+
+.search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.search-container button:hover {
+  background: #ccc;
+}
+
+.btn.btn-x{
+  color: black;
+  margin: 0 1rem 0 1rem;
+  background-color: #78A01B;
+  border: none;
+  font-weight: 700;
+}
+
+.btn.btn-y{
+  color: black;
+  margin: 0 1rem 0 1rem;
+  background-color: #95714B;
+  border: none;
+  font-weight: 700;
+}
+
+.btn.btn-z{
+  color: black;
+  background-color: #78A01B;
+  border: none;
+  font-weight: 700;
+  width: 20%;
+  font-size: 20px;
+}
+
+.section1 {
+  background-image: url("../assets/images/pages/homepage/A.png");
+  min-height: 650px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.content-title {
+  font-size: 50px;
+}
+
+.content-subtitle {
+  font-size: 15px;
+  line-height: 150%;
+}
+
+.content-img {
+  width: 100%;
+}
+
+.parallax2 {
+  background-image: url("../assets/images/pages/homepage/Banner2.jpg");
+  min-height: 650px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+
+.flex1 {
+  display: flex;
+  justify-content: center;
+}
+
+.flex1 > div {
+  background-color: rgba(128, 128, 128, 0.5);
+  width: 20%;
+  margin: 5%;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+  padding: 20px;
+  border-radius: 2rem;
+}
+
+.flex1 > div:hover {
+  transform: scale(1.1);
+}
+
+.section2 {
+  background-image: url("../assets/images/pages/homepage/C.png");
+  min-height: 650px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.testimoni {
+  padding: 6rem 3rem;
+  background-color: #F5F5F5;
+}
+
+.testimoni-area {
+  padding-bottom: 3rem;
+}
+
+.testimoni-subtitle {
+  margin-bottom: 4rem;
+}
+
+.testimoni-image img {
+  width: 77%;
+}
+
+.testimoni-image img:hover {
+  transform: scale(1.2);
+  background-image: linear-gradient(#F5F5F5, #E5E5E5);
+  border-radius: 2rem;
+  padding: 2rem 1rem;
+}
+
