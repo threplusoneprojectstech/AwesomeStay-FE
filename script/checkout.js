@@ -80,7 +80,7 @@ $.ajax(settings).done(function (response) {
       });
   }
   else{
-      alert(response.message);
-      return;
+    alert(response.message);
+    return;
   }
 });
