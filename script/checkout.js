@@ -26,7 +26,7 @@ function ItemBuilder(itemName, price, itemId){
             <h6 class="my-0">${itemName}</h6>
             <small class="text-muted">Rp. ${price}</small>
         </div>
-        <span class="text-muted"><a href="./details.html?iid=${itemId}">Details</a></span>
+        <span class="text-muted"><a href="./detail-destination.html?iid=${itemId}">Details</a></span>
     </li>
   `
 }
@@ -73,7 +73,7 @@ $.ajax(settings).done(function (response) {
             doc.innerHTML = doc.innerHTML+=ItemBuilder(itemName, price, item_id);
           }
           else{
-            console.log(response);
+            alert(response.message);
           }
         })
       });
