@@ -175,7 +175,7 @@
 <script>
     function SearchCallback(e){
         e.preventDefault();
-        if(window.localStorage.getItem("isAuthorized") == 0){
+        if(window.localStorage.getItem("isAuthorized") == 0 || localStorage.getItem("isAuthorized")==null || localStorage.getItem("isAuthorized")==""){
             window.location.href = "./pages/login.html";
             return;
         }
