@@ -120,6 +120,36 @@ function HeaderBuilderAuthorizedPaged(){
     </nav>`
     return head;
 }
+function HeaderBuilderForAdmin(){
+    let head = `
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-bg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../assets/images/common/logo.png" alt="" class="d-inline-block align-text-top img-logo">
+                <p class="text-logo">
+                    AwesomeStay
+                </p>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="col-auto">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <a type="button" class="btn btn-secondary" id="btn-register" onclick="logout()" href="list-destination.html"> List Destination </a>
+                        <a type="button" class="btn btn-secondary" id="btn-register" onclick="logout()" href="../index.html"> Logout </a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>`
+    return head;
+}
+
 function FooterBuilder(){
     let foot = `
     <!-- Footer -->
@@ -193,8 +223,14 @@ function pathname(){
 }
 var pathname = pathname()
 
+
+// if admin-home
+if (pathname.includes("admin")){
+    doc = document.getElementById("content-body-master-body")
+    doc.innerHTML = HeaderBuilderForAdmin() + doc.innerHTML + FooterBuilder();
+}
 // If di dalam pages
-if(pathname.includes("pages")){
+else if(pathname.includes("pages")){
     if(window.localStorage.getItem("isAuthorized") == 0){
         doc = document.getElementById("content-body-master-body")
         doc.innerHTML = HeaderBuilderForPages() + doc.innerHTML + FooterBuilder();
