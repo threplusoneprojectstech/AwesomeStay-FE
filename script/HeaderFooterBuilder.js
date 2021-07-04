@@ -27,6 +27,37 @@ function HeaderBuilderUnauthorized(){
     </nav>`
     return head;
 }
+
+function HeaderBuilderForPages(){
+    let head = `
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-bg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../assets/images/common/logo.png" alt="" class="d-inline-block align-text-top img-logo">
+                <p class="text-logo">
+                    AwesomeStay
+                </p>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="col-auto">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <button type="button" class="btn btn-secondary" id="btn-login"> Login </button>
+                        <button type="button" class="btn btn-secondary" id="btn-register"> Register </button>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>`
+    return head;
+}
+
 function FooterBuilder(){
     let foot = `
     <!-- Footer -->
@@ -92,7 +123,26 @@ function FooterBuilder(){
     </footer>`
     return foot;
 }
-// if belum login..
-doc = document.getElementById("content-body-master-body")
-doc.innerHTML = HeaderBuilderUnauthorized() + doc.innerHTML + FooterBuilder();
-// else udah login..
+
+// Check pathname
+function pathname(){
+    return window.location.pathname
+}
+var pathname = pathname()
+
+// If di dalam pages
+if(pathname.includes("pages")){
+    doc = doc = document.getElementById("content-body-master-body")
+    doc.innerHTML = HeaderBuilderForPages() + doc.innerHTML + FooterBuilder();
+}
+// If di index
+else{
+    // if belum login..
+    doc = document.getElementById("content-body-master-body")
+    doc.innerHTML = HeaderBuilderUnauthorized() + doc.innerHTML + FooterBuilder();
+    // else udah login..
+}
+
+
+
+
