@@ -41,12 +41,15 @@
                     <br><br><br><br>
                     <h2 class="content-title">What is Glamping?</h2>
                     <p class="content-subtitle">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Aenean euismod bibendum laoreet. Proin gravida dolor sit amet
-                        lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor.
-                        Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                        Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci,
-                        sed rhoncus pronin sapien nunc accuan eget.
+                        Glamping is where stunning nature meets modern luxury.
+                        It’s a way to experience the untamed and completely unique parts of
+                        the world—without having to sacrifice creature comforts.
+                        <br>
+                        The way we travel has changed. We no longer want a generic, one-size-fits-all vacation.
+                        We want to explore on our terms and immerse ourselves in local culture,
+                        and we no longer just want to simply witness nature—we want to live in it.
+                        A fusion of glamour and camping, glamping is a way to authentically experience the most
+                        awe-inspiring locales around the world.
                     </p>
                 </div>
 
@@ -64,12 +67,15 @@
                     <br><br><br><br>
                     <h2 class="content-title">Why should you try it?</h2>
                     <p class="content-subtitle">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Aenean euismod bibendum laoreet. Proin gravida dolor sit amet
-                        lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor.
-                        Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                        Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci,
-                        sed rhoncus pronin sapien nunc accuan eget.
+                        Glamping is a lifestyle for many people.
+                        It's the best way to enjoy being close to nature without compromising on the comforts of modern
+                        life. In addition, Glamping itself gives you several benefits for your body and mind through the
+                        fun
+                        of camping without roughing it. What you will get are a new incentive to independence,
+                        greater freedom, rest of mind, and revives your love of nature.
+                        In fact, glamping enhances your connection with the glorious outdoors and affords an
+                        unforgettable experience for the entire family.
+                        When you go glamping, you enjoy all the benefits of traditional camping but in luxury and style.
                     </p>
                 </div>
             </div>
@@ -84,13 +90,21 @@
             <br>
             <div class="flex1" align="center">
                 <div>
+                    <i class="fa fa-hand-o-up fa-3x"></i>
+                    <br>
+                    <h3>Glamping One Click Away</h3>
+                    <p class="content-subtitle">
+                        Book your trip with just a single click by consulting with our experts. We will take care of your trip.
+                    </p>
+                </div>
+
+                <div>
                     <i class="fas fa-headset fa-3x"></i>
                     <br>
                     <h3>Real-time Online Advisor</h3>
                     <p class="content-subtitle">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Aenean euismod bibendum laoreet. Proin gravida dolor sit amet
-                        lacus accumsan et viverra justo commodo.
+                        Traveling is made easier by consulting our trusted experts, we will make you understand what you
+                        need to stay at the best glamping.
                     </p>
                 </div>
 
@@ -99,22 +113,11 @@
                     <br>
                     <h3>1000+ Unique Accomodations</h3>
                     <p class="content-subtitle">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Aenean euismod bibendum laoreet. Proin gravida dolor sit amet
-                        lacus accumsan et viverra justo commodo.
+                        There are more than a thousand unique accommodations that you can choose. But you
+                        don't have to worry about choosing confused because we will provide the best recommendations.
                     </p>
                 </div>
 
-                <div>
-                    <i class="fas fa-handshake fa-3x"></i>
-                    <br>
-                    <h3>Satisfaction Guaranteed</h3>
-                    <p class="content-subtitle">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Aenean euismod bibendum laoreet. Proin gravida dolor sit amet
-                        lacus accumsan et viverra justo commodo.
-                    </p>
-                </div>
             </div>
             <br>
         </div>
@@ -125,9 +128,8 @@
             <br><br><br>
             <h1 class="head-title">Your Glamping Experience <br> is One Click Away</h1>
             <p class="head-subtitle">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Aenean euismod bibendum laoreet. Proin gravida dolor sit amet
-                lacus accumsan et viverra justo commodo.
+                If you want to have the best travel experience with a natural atmosphere, you don't have to think hard
+                anymore. With a click of the Consult Us button, you will have that experience.
             </p>
             <br><br><br>
             <button type="button" class="btn btn-z" id="btn-consult-start"> Consult With Us </button>
@@ -173,17 +175,18 @@
 <script src="assets/libraries/bootstrap/bootstrap.min.js"></script>
 <script src="./script/HeaderFooterBuilder.js"></script>
 <script>
-    function SearchCallback(e){
+    function SearchCallback(e) {
         e.preventDefault();
-        if(window.localStorage.getItem("isAuthorized") == 0 || localStorage.getItem("isAuthorized")==null || localStorage.getItem("isAuthorized")==""){
+        if (window.localStorage.getItem("isAuthorized") == 0 || localStorage.getItem("isAuthorized") == null || localStorage.getItem("isAuthorized") == "") {
             window.location.href = "./pages/login.html";
             return;
         }
-        else{
+        else {
             window.location.href = "./pages/user-chat.html";
         }
     }
     document.getElementById("search-form").addEventListener("submit", SearchCallback);
     document.getElementById("btn-consult-start").addEventListener("click", SearchCallback);
 </script>
+
 </html>
