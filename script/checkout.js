@@ -71,6 +71,8 @@ $.ajax(settings).done(function (response) {
             TotalPrice += price;
             document.getElementById("strongprice").innerHTML = "Rp. " + parseInt(TotalPrice);
             doc.innerHTML = doc.innerHTML+=ItemBuilder(itemName, price, item_id);
+            document.getElementById("firstName").setAttribute("placeholder", window.localStorage.getItem("fullName"));
+            document.getElementById("email").setAttribute("placeholder", window.localStorage.getItem("email"));
           }
           else{
             alert(response.message);
@@ -83,3 +85,12 @@ $.ajax(settings).done(function (response) {
     return;
   }
 });
+
+// function submit_by_id() {
+//   validation = document.querySelectorAll('.needs-validation')
+//   if (validation) // Calling validation function
+//   {
+//     document.getElementById("form-checkout").submit(); //form submission
+//     window.location.href = "login.html";
+//   }
+//   }
